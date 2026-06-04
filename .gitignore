@@ -1,0 +1,21 @@
+# Entorno virtual
+.venv/
+
+# Secretos: tu clave de API (NO subir)
+.env
+
+# Cachés de Python
+__pycache__/
+*.py[cod]
+
+# Logs y artefactos pesados del crawl (se regeneran)
+data/crawl.log
+data/streamlit.log
+data/videos/
+data/transcripts/
+
+# Se conservan en el repo:
+#   data/videos.db        (dataset indexado)
+#   data/thumbnails/      (miniaturas)
+#   tests/results.out     (evidencia de pruebas)
+#   doc/figs, doc/evidencia

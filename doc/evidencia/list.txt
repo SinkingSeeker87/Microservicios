@@ -1,0 +1,36 @@
+[start] 2026-06-03 18:13:20.090097
+
+Namespace(cmd='List', URL='https://www.youtube.com/@lacomer1/videos', Path='./data', N=30, func=<function List at 0x000001A3D0A05A80>)
+
+https://www.youtube.com/watch?v=yitgXqinpKQ
+https://www.youtube.com/watch?v=QQ4gSXXji6I
+https://www.youtube.com/watch?v=V3CFk7FBvvk
+https://www.youtube.com/watch?v=uyYig3j7flM
+https://www.youtube.com/watch?v=j7MSQl9j7yc
+https://www.youtube.com/watch?v=o-NUaTK82H0
+https://www.youtube.com/watch?v=eemwonheeNQ
+https://www.youtube.com/watch?v=182rBJ90SBs
+https://www.youtube.com/watch?v=jXWxMm43w6A
+https://www.youtube.com/watch?v=dQSXvZ6Q90w
+https://www.youtube.com/watch?v=_0L5CJuxaKo
+https://www.youtube.com/watch?v=q-qqrJaPzwY
+https://www.youtube.com/watch?v=dKPjFtXvK8Q
+https://www.youtube.com/watch?v=i2zVWSxibp0
+https://www.youtube.com/watch?v=_LW-aNPoKm8
+https://www.youtube.com/watch?v=L24U5RxvhPg
+https://www.youtube.com/watch?v=goXVocQNskE
+https://www.youtube.com/watch?v=fm-GkSKpZtw
+https://www.youtube.com/watch?v=uPvQ9BY6yno
+https://www.youtube.com/watch?v=yBFYHEDEnb4
+https://www.youtube.com/watch?v=iGAE1NMmq6M
+https://www.youtube.com/watch?v=jjoJHNUIqGY
+https://www.youtube.com/watch?v=_ewSqoJShCA
+https://www.youtube.com/watch?v=MMAUnZrQ7YU
+https://www.youtube.com/watch?v=zqCg57K0xWM
+https://www.youtube.com/watch?v=H3daosr94EI
+https://www.youtube.com/watch?v=ZELz4OB4qU4
+https://www.youtube.com/watch?v=1A_34p1F_5U
+https://www.youtube.com/watch?v=E4oGbqQLI0o
+https://www.youtube.com/watch?v=guTmKuE4N04
+
+[end] 2026-06-03 18:13:20.095592

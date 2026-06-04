@@ -1,0 +1,11 @@
+# Microservicio TC3005B — La Comer (@lacomer1)
+yt-dlp==2026.3.17
+beautifulsoup4>=4.12
+streamlit>=1.30
+pillow>=10.0
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+imageio-ffmpeg>=0.6        # binario estático de ffmpeg (escalado a 256h)
+google-generativeai>=0.8   # opcional: solo si se define GEMINI_API_KEY
+playwright>=1.40           # opcional: capturas del dashboard (doc/make_screenshots.py)

@@ -1,0 +1,41 @@
+[start] 2026-06-03 18:13:22.235819
+
+Namespace(cmd='Buscar', Query='Views > 204', Likes=None, Views=None, Duracion=None, Comentarios=None, Path='./data', func=<function Buscar at 0x00000164A17FBB00>)
+
+
+Consulta: views > 204
+Probabilidad de la búsqueda: p = 0.7333  (22 de 30 videos)
+
+URL                                                          p  views
+https://www.youtube.com/watch?v=uyYig3j7flM             p = 0.73  views = 1165
+https://www.youtube.com/watch?v=j7MSQl9j7yc             p = 0.73  views = 2317
+https://www.youtube.com/watch?v=o-NUaTK82H0             p = 0.73  views = 2624
+https://www.youtube.com/watch?v=eemwonheeNQ             p = 0.73  views = 6602
+https://www.youtube.com/watch?v=jXWxMm43w6A             p = 0.73  views = 24705
+https://www.youtube.com/watch?v=dQSXvZ6Q90w             p = 0.73  views = 557
+https://www.youtube.com/watch?v=_0L5CJuxaKo             p = 0.73  views = 20080
+https://www.youtube.com/watch?v=goXVocQNskE             p = 0.73  views = 214
+https://www.youtube.com/watch?v=guTmKuE4N04             p = 0.73  views = 1611
+https://www.youtube.com/watch?v=E4oGbqQLI0o             p = 0.73  views = 562
+https://www.youtube.com/watch?v=H3daosr94EI             p = 0.73  views = 2592
+https://www.youtube.com/watch?v=1A_34p1F_5U             p = 0.73  views = 392
+https://www.youtube.com/watch?v=jjoJHNUIqGY             p = 0.73  views = 257
+https://www.youtube.com/watch?v=iGAE1NMmq6M             p = 0.73  views = 204091
+https://www.youtube.com/watch?v=q-qqrJaPzwY             p = 0.13  views = 346074
+https://www.youtube.com/watch?v=dKPjFtXvK8Q             p = 0.13  views = 536770
+https://www.youtube.com/watch?v=_LW-aNPoKm8             p = 0.13  views = 409372
+https://www.youtube.com/watch?v=L24U5RxvhPg             p = 0.13  views = 334784
+https://www.youtube.com/watch?v=fm-GkSKpZtw             p = 0.03  views = 2052678
+https://www.youtube.com/watch?v=i2zVWSxibp0             p = 0.03  views = 656441
+https://www.youtube.com/watch?v=zqCg57K0xWM             p = 0.03  views = 3007895
+https://www.youtube.com/watch?v=uPvQ9BY6yno             p = 0.03  views = 1061103
+
+Matriz de adyacencia (correlación) de parejas de campos:
+               views  likes  duracion  n_comentarios
+views           1.00   0.27     -0.15           0.68
+likes           0.27   1.00     -0.16           0.54
+duracion       -0.15  -0.16      1.00          -0.18
+n_comentarios   0.68   0.54     -0.18           1.00
+
+
+[end] 2026-06-03 18:13:22.288317
