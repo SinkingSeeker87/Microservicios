@@ -44,6 +44,9 @@ python Main.py Buscar --Query "Likes > 950000"     # advertencia de baja probabi
 # Re-genera categoría/resumen con Gemini SIN re-descargar (usa la BD existente)
 python Main.py Enrich --Path ./data
 
+# Transcribe con Gemini el audio del video 256h (N videos sin transcripción)
+python Main.py TranscribeVideo --N 1 --Path ./data
+
 # Probar el crawler de forma aislada (--no_video omite la descarga de video)
 python Main.py Crawl --URL https://www.youtube.com/@lacomer1/videos --N 2
 python Main.py Crawl --URL https://www.youtube.com/@lacomer1/videos --N 2 --no_video

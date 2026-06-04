@@ -14,8 +14,10 @@ data/streamlit.log
 data/videos/
 data/transcripts/
 
+# Documento LaTeX: se entrega como PDF aparte, no se sube al repo
+doc/
+
 # Se conservan en el repo:
 #   data/videos.db        (dataset indexado)
 #   data/thumbnails/      (miniaturas)
 #   tests/results.out     (evidencia de pruebas)
-#   doc/figs, doc/evidencia

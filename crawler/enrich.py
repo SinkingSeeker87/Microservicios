@@ -108,6 +108,32 @@ def check_gemini():
                        f"Se usará modo LOCAL. Ajusta GEMINI_MODEL en .env.")
 
 
+def gemini_transcribe_video(video_path, timeout=240):
+    """Transcribe el audio de un video con Gemini (File API) a partir del .mp4
+    escalado a 256h. Devuelve el texto o '' si falla / no hay clave."""
+    model = _gemini_client()
+    if model is None or not video_path or not os.path.exists(video_path):
+        return ""
+    try:
+        import time
+        import google.generativeai as genai
+        f = genai.upload_file(path=video_path)
+        waited = 0
+        while getattr(getattr(f, "state", None), "name", "") == "PROCESSING" and waited < timeout:
+            time.sleep(3); waited += 3; f = genai.get_file(f.name)
+        prompt = ("Transcribe literalmente el audio hablado de este video en "
+                  "español. Devuelve solo la transcripción, sin comentarios.")
+        r = model.generate_content([f, prompt])
+        try:
+            genai.delete_file(f.name)
+        except Exception:
+            pass
+        return (r.text or "").strip()
+    except Exception as exc:
+        print(f"[gemini-video] error: {exc}")
+        return ""
+
+
 def _gemini_summary(model, text):
     r = model.generate_content(
         "Resume en máximo 80 palabras, en español, el siguiente contenido de "

@@ -58,6 +58,11 @@ def main():
     sp.add_argument("--Path", default="./data", type=str)
     sp.set_defaults(func=pipeline.Reenrich)
 
+    sp = subparsers.add_parser("TranscribeVideo", description="Transcribe con Gemini el video 256h (N sin transcripcion)")
+    sp.add_argument("--N", default=1, type=int)
+    sp.add_argument("--Path", default="./data", type=str)
+    sp.set_defaults(func=pipeline.TranscribeVideos)
+
     sp = subparsers.add_parser("Buscar", description="Busqueda probabilistica de campos")
     sp.add_argument("--Query", type=str, help='Ej: "Likes > 95"')
     sp.add_argument("--Likes", type=str)

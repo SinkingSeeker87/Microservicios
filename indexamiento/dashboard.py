@@ -166,11 +166,12 @@ tab1, tab2, tab3, tab4 = st.tabs([
 with tab1:
     st.subheader("Pregunta sobre el canal")
     ejemplos = [
-        "¿En qué video hablan del Cobia smart phone?",
-        "¿Cuánto cuesta un Cobia smart phone?",
         "¿Qué videos tienen más reacciones sociales?",
+        "¿En qué videos hablan de naranja?",
         "¿Sobre qué tratan los videos que más likes tienen?",
         "¿Qué videos tienen comentarios positivos?",
+        "¿En qué video hablan del Cobia smart phone?",
+        "¿Cuánto cuesta un Cobia smart phone?",
     ]
     col_q, col_e = st.columns([3, 2])
     with col_e:

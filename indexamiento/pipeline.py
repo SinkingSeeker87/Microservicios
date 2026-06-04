@@ -77,6 +77,47 @@ def Reenrich(Options):
     con.close()
 
 
+def TranscribeVideos(Options):
+    """Transcribe con Gemini (desde el video 256h) hasta --N videos que carezcan
+    de transcripción, y regenera su resumen/categoría. No re-descarga nada."""
+    path = getattr(Options, "Path", "./data")
+    n = int(getattr(Options, "N", 1))
+    con = db.connect(path)
+    ok, msg = enrich.check_gemini()
+    print(f"[transcribe] {msg}")
+    if not ok:
+        print("[transcribe] Se requiere Gemini activo (revisa .env). Aborta.")
+        con.close()
+        return
+    rows = db.all_rows(con)
+    pend = [r for r in rows if not (r.get("transcripcion") or "").strip()]
+    print(f"[transcribe] videos sin transcripción: {len(pend)} | procesaré hasta {n}")
+    vids_dir = os.path.join(path, "videos")
+    done = 0
+    for r in pend:
+        if done >= n:
+            break
+        vid = r.get("video_id")
+        mp4 = os.path.join(vids_dir, f"{vid}.mp4")
+        if not os.path.exists(mp4):
+            print(f"  - {vid}: sin .mp4, salto")
+            continue
+        print(f"  - {vid}: transcribiendo con Gemini (video 256h)...")
+        text = enrich.gemini_transcribe_video(mp4)
+        if not text:
+            print("    sin resultado")
+            continue
+        rec = dict(r)
+        rec["_subs_text"] = text
+        rec["_description"] = ""
+        enrich.enrich_record(rec)          # fija transcripcion y regenera resumen/categoria
+        db.upsert_video(con, rec)
+        done += 1
+        print(f"    OK ({len(text)} chars) :: {text[:100]}")
+    print(f"[transcribe] completados: {done}")
+    con.close()
+
+
 def List(Options):
     """Inspección independiente de la tubería: imprime las URLs indexadas."""
     path = getattr(Options, "Path", "./data")
